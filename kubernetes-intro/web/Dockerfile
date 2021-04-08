@@ -3,7 +3,8 @@ FROM nginx:alpine
 ENV NGINX_USER=1001
 ENV NGINX_PORT=8000
 
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf \
+     /app/homework.html /app/homework.html
 
 RUN touch /var/run/nginx.pid && \
   chown -R ${NGINX_PORT} /var/run/nginx.pid && \
