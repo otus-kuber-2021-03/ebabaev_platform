@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  labels:
+    key: app
+spec:
+  securityContext:
+    runAsUser: 1001
+  containers:
+  - name: web
+    image: ebabaev/web-app:latest
+    volumeMounts:
+      - name: app
+        mountPath: /app
+    readinessProbe:
+        httpGet:
+          port: 8000
+    livenessProbe:
+        tcpSocket:
+          port: 8000
+  initContainers:
+    - name: init-index-page
+      image: busybox
+      command:
+        [
+          "sh",
+          "-c",
+          "wget -O- https://raw.githubusercontent.com/express42/otus-platform-snippets/master/Module-02/Introduction-to-Kubernetes/wget.sh | sh",
+        ]
+      volumeMounts:
+        - name: app
+          mountPath: /app
+  volumes:
+    - name: app
+      emptyDir: {}
