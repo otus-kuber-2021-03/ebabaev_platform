@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-monitoring
+  labels:
+    app: nginx-monitoring 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-monitoring
+  template:
+    metadata:
+      labels:
+        app: nginx-monitoring
+    spec:
+      containers:
+      - name: nginx-mon
+        image: natrofl/kube-monitoring-test:v1
+        ports:
+          - name: web
+            containerPort: 80
+            protocol: TCP
+      - name: exporter
+        image: nginx/nginx-prometheus-exporter:0.7.0
+        ports:
+          - name: metrics
+            containerPort: 9113
+            protocol: TCP
+        args: ['-nginx.scrape-uri', 'http://127.0.0.1:80/basic_status']
