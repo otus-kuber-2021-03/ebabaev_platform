@@ -31,10 +31,10 @@ spec:
         readinessProbe:
           httpGet:
             path: /index.html
-            port: 8000
+            port: 8080
         livenessProbe:
           tcpSocket:
-            port: 8000
+            port: 8080
         volumeMounts:
         - name: app
           mountPath: /app
