@@ -1,15 +1,9 @@
-FROM nginx:alpine
+  
+FROM nginx:latest
 
-ENV NGINX_USER=1001
-ENV NGINX_PORT=8000
-
-COPY nginx.conf /etc/nginx/nginx.conf \
-     /app/homework.html /app/homework.html
-
-RUN touch /var/run/nginx.pid && \
-  chown -R ${NGINX_USER} /var/run/nginx.pid && \
-  chown -R ${NGINX_USER} /var/cache/nginx
-
-EXPOSE ${NGINX_PORT}
-
-USER ${NGINX_USER}
+ARG nginx_uid=1001
+COPY web.conf /etc/nginx/conf.d/
+COPY /app /app
+WORKDIR /app
+RUN chown -R nginx /app
+EXPOSE 8000
