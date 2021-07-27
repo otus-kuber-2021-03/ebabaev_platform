@@ -21,4 +21,4 @@ spec:
     spec:
       containers:
       - name: server
-        image: xka1n/hipster-paymentservice:v0.0.2
+        image: ebabaev/hipster-paymentservice:v0.0.2

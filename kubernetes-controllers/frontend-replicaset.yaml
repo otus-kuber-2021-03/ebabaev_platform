@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: xka1n/hipster-frontend:v0.0.2
+        image: ebabaev/frontend:latest
         env:
         - name: PORT
           value: "8080"

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: xka1n/hipster-frontend:v0.0.1
+        image: ebabaev/frontend:latest
         readinessProbe:
           initialDelaySeconds: 10
           httpGet:
