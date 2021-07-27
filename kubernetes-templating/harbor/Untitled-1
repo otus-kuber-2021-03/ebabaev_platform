@@ -1,4 +1,4 @@
-expose:
+ expose:
   type: ingress
   tls:
     enables: true
