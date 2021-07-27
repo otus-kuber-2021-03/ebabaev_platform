@@ -20,4 +20,4 @@ spec:
     spec:
       containers:
       - name: server
-        image: ebabaev/hipster-paymentservice:v0.0.1
+        image: ebabaev/payment:v0.0.1
