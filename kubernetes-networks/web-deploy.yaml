@@ -6,7 +6,7 @@ spec:
   replicas: 3 # Начнем с одного пода
   selector: # Укажем, какие поды относятся к нашему Deployment:
     matchLabels: # - это поды с меткой
-      app: frontend # app и ее значением web
+      app: web # app и ее значением web
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -31,7 +31,7 @@ spec:
         readinessProbe:
           httpGet:
             path: /index.html
-            port: 8000
+            port: 80
         livenessProbe:
           tcpSocket:
             port: 8000

@@ -21,7 +21,7 @@ spec:
         port: 80
     livenessProbe:
       tcpSocket:
-        port: 8080
+        port: 8000
     volumeMounts:
     - name: app
       mountPath: /app
