@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: ebabaev/web-app:latest
+          image: ebabaev/web-app:v.0.0.3
           readinessProbe:
             httpGet:
               path: /index.html
