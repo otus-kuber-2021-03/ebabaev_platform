@@ -17,27 +17,29 @@ spec:
       name: web
       labels:
         app: web
+        name: web
     spec:
-      initContainers:
-        - name: init-web
-          image: busybox:1.31.0
-          command: ['sh', '-c', 'wget -O- https://tinyurl.com/otus-k8s-intro | sh']
-          volumeMounts:
-          - name: app
-            mountPath: /app
       containers:
-      - name: web
-        image: ebabaev/web-app:latest
-        readinessProbe:
-          httpGet:
-            path: /index.html
-            port: 8000
-        livenessProbe:
-          tcpSocket:
-            port: 8000
-        volumeMounts:
-        - name: app
-          mountPath: /app
+        - name: web
+          image: ebabaev/web-app:latest
+          readinessProbe:
+            httpGet:
+              path: /index.html
+              port: 8000
+          livenessProbe:
+            tcpSocket:
+              port: 8000
+          volumeMounts:
+            - name: app
+              mountPath: /app
+      initContainers:
+        - name: init
+          image: library/busybox:1.31.0
+          command: [ 'sh', '-c', 'wget -O- https://tinyurl.com/otus-k8s-intro | sh' ]
+          volumeMounts:
+            - name: app
+              mountPath: /app
+
       volumes:
       - name: app
         emptyDir: {}
