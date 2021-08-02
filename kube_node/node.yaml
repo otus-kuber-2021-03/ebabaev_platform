@@ -1,0 +1,241 @@
+kind: Node
+apiVersion: v1
+metadata:
+  name: cl17epnc5jdpfmv37nb4-apap
+  selfLink: /api/v1/nodes/cl17epnc5jdpfmv37nb4-apap
+  uid: 113b1856-31a9-41ca-8c57-ea4465cf8752
+  resourceVersion: '11143'
+  creationTimestamp: '2021-08-02T16:28:40Z'
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/instance-type: standard-v2
+    beta.kubernetes.io/os: linux
+    failure-domain.beta.kubernetes.io/zone: ru-central1-b
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: cl17epnc5jdpfmv37nb4-apap
+    kubernetes.io/os: linux
+    node.kubernetes.io/instance-type: standard-v2
+    node.kubernetes.io/kube-proxy-ds-ready: 'true'
+    node.kubernetes.io/masq-agent-ds-ready: 'true'
+    node.kubernetes.io/node-problem-detector-ds-ready: 'true'
+    topology.kubernetes.io/zone: ru-central1-b
+    yandex.cloud/node-group-id: catg6kn94h785ego192b
+    yandex.cloud/pci-topology: k8s
+    yandex.cloud/preemptible: 'false'
+  annotations:
+    csi.volume.kubernetes.io/nodeid: >-
+      {"disk-csi-driver.mks.ycloud.io":"epdhi4gmiig050ejjrbn","io.ycloud.mks.disk-csi-driver":"epdhi4gmiig050ejjrbn"}
+    node.alpha.kubernetes.io/ttl: '0'
+    volumes.kubernetes.io/controller-managed-attach-detach: 'true'
+spec:
+  podCIDR: 10.24.128.0/24
+  podCIDRs:
+    - 10.24.128.0/24
+  providerID: yandex://epdhi4gmiig050ejjrbn
+status:
+  capacity:
+    cpu: '2'
+    ephemeral-storage: 66012696Ki
+    hugepages-1Gi: '0'
+    hugepages-2Mi: '0'
+    memory: 4030564Ki
+    pods: '110'
+  allocatable:
+    cpu: 1930m
+    ephemeral-storage: '30772529461'
+    hugepages-1Gi: '0'
+    hugepages-2Mi: '0'
+    memory: 2777188Ki
+    pods: '110'
+  conditions:
+    - type: FrequentContainerdRestart
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:39:28Z'
+      lastTransitionTime: '2021-08-02T16:29:25Z'
+      reason: NoFrequentContainerdRestart
+      message: containerd is functioning properly
+    - type: CorruptDockerOverlay2
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:39:28Z'
+      lastTransitionTime: '2021-08-02T16:29:25Z'
+      reason: NoCorruptDockerOverlay2
+      message: docker overlay2 is functioning properly
+    - type: KernelDeadlock
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:39:28Z'
+      lastTransitionTime: '2021-08-02T16:29:25Z'
+      reason: KernelHasNoDeadlock
+      message: kernel has no deadlock
+    - type: ReadonlyFilesystem
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:39:28Z'
+      lastTransitionTime: '2021-08-02T16:29:25Z'
+      reason: FilesystemIsNotReadOnly
+      message: Filesystem is not read-only
+    - type: FrequentUnregisterNetDevice
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:39:28Z'
+      lastTransitionTime: '2021-08-02T16:29:25Z'
+      reason: NoFrequentUnregisterNetDevice
+      message: node is functioning properly
+    - type: FrequentKubeletRestart
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:39:28Z'
+      lastTransitionTime: '2021-08-02T16:29:25Z'
+      reason: NoFrequentKubeletRestart
+      message: kubelet is functioning properly
+    - type: FrequentDockerRestart
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:39:28Z'
+      lastTransitionTime: '2021-08-02T16:29:25Z'
+      reason: NoFrequentDockerRestart
+      message: docker is functioning properly
+    - type: NetworkUnavailable
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:28:50Z'
+      lastTransitionTime: '2021-08-02T16:28:50Z'
+      reason: RouteCreated
+      message: RouteController created a route
+    - type: MemoryPressure
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:38:52Z'
+      lastTransitionTime: '2021-08-02T16:28:40Z'
+      reason: KubeletHasSufficientMemory
+      message: kubelet has sufficient memory available
+    - type: DiskPressure
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:38:52Z'
+      lastTransitionTime: '2021-08-02T16:28:40Z'
+      reason: KubeletHasNoDiskPressure
+      message: kubelet has no disk pressure
+    - type: PIDPressure
+      status: 'False'
+      lastHeartbeatTime: '2021-08-02T16:38:52Z'
+      lastTransitionTime: '2021-08-02T16:28:40Z'
+      reason: KubeletHasSufficientPID
+      message: kubelet has sufficient PID available
+    - type: Ready
+      status: 'True'
+      lastHeartbeatTime: '2021-08-02T16:38:52Z'
+      lastTransitionTime: '2021-08-02T16:28:50Z'
+      reason: KubeletReady
+      message: kubelet is posting ready status. AppArmor enabled
+  addresses:
+    - type: InternalIP
+      address: 10.129.0.6
+    - type: ExternalIP
+      address: 84.252.143.102
+    - type: Hostname
+      address: cl17epnc5jdpfmv37nb4-apap
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  nodeInfo:
+    machineID: 230000073c6aa28d4b8e054bf670bd8a
+    systemUUID: 23000007-65b1-9121-694a-00281d39ed77
+    bootID: 605175dc-13e9-422d-b4bd-29ac32a5cdb5
+    kernelVersion: 5.4.0-72-generic
+    osImage: Ubuntu 20.04.2 LTS
+    containerRuntimeVersion: docker://20.10.6
+    kubeletVersion: v1.17.17
+    kubeProxyVersion: v1.17.17
+    operatingSystem: linux
+    architecture: amd64
+  images:
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/node@sha256:8bd208e606179e6eb2d7955ce58f37acb6abcb001d0a4c6666560324494c6e80
+        - cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/node:v3.9.5
+      sizeBytes: 194700874
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/cni@sha256:150ad0f0f34966775ad9d8cd653a9699243d517ab61c9ed0fb5f2aa24ac04fa7
+        - cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/cni:v3.9.5
+      sizeBytes: 166887857
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/kube-proxy/kube-proxy@sha256:a636c547855407fcec3c9b0112abe4f22f04aae7ee6c3c207d1a313c5078da3d
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/kube-proxy/kube-proxy:v1.17.12
+      sizeBytes: 116695341
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/kube-proxy@sha256:9fd0f6828db21093174426b336ae608e64e54e1789f39236c015184550275164
+        - cr.yandex/crpsjg1coh47p81vh2lc/kube-proxy:v1.17.17
+      sizeBytes: 116642093
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/node-problem-detector/node-problem-detector@sha256:276335fa25a703615cc2f2cdc51ba693fac4bdd70baa63f9cbf228291defd776
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/node-problem-detector/node-problem-detector:v0.8.0
+      sizeBytes: 108715243
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/nvidia/k8s-device-plugin@sha256:00c700122ebc5533e87bf2df193f457d2c2ee37a4a97999466a9a388617cb16b
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/nvidia/k8s-device-plugin:1.0.0-beta6
+      sizeBytes: 64183423
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/typha@sha256:cdb05d919c23a7f4d6fbb8299b3475dd67a08f510d7ca6546a71c01d602d0ced
+        - cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/typha:v3.9.5
+      sizeBytes: 57158445
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/ip-masq-agent/ip-masq-agent-amd64@sha256:7d02b5aaf76c999529b68d2b5e21d20468c14baa467e1c1b16126e0ccd86753b
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/ip-masq-agent/ip-masq-agent-amd64:v2.5.0
+      sizeBytes: 50148508
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/coredns/coredns@sha256:4dd4d0e5bcc9bd0e8189f6fa4d4965ffa81207d8d99d29391f28cbd1a70a0163
+        - cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/coredns/coredns:1.6.2
+      sizeBytes: 44100963
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/cpvpa-amd64@sha256:dadcde9722db12a235e1279a39bab231004d04e97cfdb36e18e7bf068f4d0d39
+        - cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/cpvpa-amd64:v0.8.1
+      sizeBytes: 40616150
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/cluster-proportional-autoscaler-amd64@sha256:a2db01cfd2ae1a16f0feef274160c659c1ac5aa433e1c514de20e334cb66c674
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/coredns/cluster-proportional-autoscaler-amd64@sha256:a2db01cfd2ae1a16f0feef274160c659c1ac5aa433e1c514de20e334cb66c674
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/calico/cluster-proportional-autoscaler-amd64:1.7.1
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/coredns/cluster-proportional-autoscaler-amd64:1.7.1
+      sizeBytes: 40067731
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/metrics-server/metrics-server-amd64@sha256:4ca116565ff6a46e582bada50ba3550f95b368db1d2415829241a565a6c38e2a
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/metrics-server/metrics-server-amd64:v0.3.3
+      sizeBytes: 39933796
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/metrics-server/addon-resizer@sha256:35745de3c9a2884d53ad0e81b39f1eed9a7c77f5f909b9e84f9712b37ffb3021
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/metrics-server/addon-resizer:1.8.11
+      sizeBytes: 32759973
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/yc-disk-csi-node@sha256:c2d9565b9031905bc55cc614ffb8d48f07542b8af1a3e56d125e40fabbcbd8ac
+        - cr.yandex/crpsjg1coh47p81vh2lc/yc-disk-csi-node:3ca235b8c5
+      sizeBytes: 30833589
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/csi/csi-node-driver-registrar@sha256:273175c272162d480d06849e09e6e3cdb0245239e3a82df6630df3bc059c6571
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/csi/csi-node-driver-registrar:v1.2.0
+      sizeBytes: 17057647
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/csi/livenessprobe@sha256:ac12fcab5bd2550d580a83b531ccea0f446ae16e5c9ed29e9c676e5ed9f4e264
+        - cr.yandex/crpsjg1coh47p81vh2lc/k8s-addons/csi/livenessprobe:v2.0.0
+      sizeBytes: 15637127
+    - names:
+        - >-
+          cr.yandex/crpsjg1coh47p81vh2lc/pause@sha256:fcaff905397ba63fd376d0c3019f1f1cb6e7506131389edbcb3d22719f1ae54d
+        - cr.yandex/crpsjg1coh47p81vh2lc/pause:3.1
+      sizeBytes: 742472
